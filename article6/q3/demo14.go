@@ -9,16 +9,14 @@ func main() {
 		str := "BCD"
 		myStr1 := MyString(str)
 		myStr2 := MyString("A" + str)
-		fmt.Printf("%T(%q) == %T(%q): %v\n",
-			str, str, myStr1, myStr1, str == myStr1)
-		fmt.Printf("%T(%q) > %T(%q): %v\n",
-			str, str, myStr2, myStr2, str > myStr2)
+		fmt.Printf("%T(%q) == %T(%q): %v\n", str, str, myStr1, myStr1, str == myStr1)
+
+		fmt.Printf("%T(%q) > %T(%q): %v\n", str, str, myStr2, myStr2, str > myStr2)
 		fmt.Printf("Type %T is the same as type %T.\n", myStr1, str)
 
 		strs := []string{"E", "F", "G"}
 		myStrs := []MyString(strs)
-		fmt.Printf("A value of type []MyString: %T(%q)\n",
-			myStrs, myStrs)
+		fmt.Printf("A value of type []MyString: %T(%q)\n", myStrs, myStrs)
 		fmt.Printf("Type %T is the same as type %T.\n", myStrs, strs)
 		fmt.Println()
 	}

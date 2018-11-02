@@ -10,6 +10,7 @@ func main() {
 		s6 = append(s6, i)
 		fmt.Printf("s6(%d): len: %d, cap: %d\n", i, len(s6), cap(s6))
 	}
+
 	fmt.Println()
 
 	// 示例2。
@@ -26,10 +27,13 @@ func main() {
 	// 示例3。
 	s8 := make([]int, 10)
 	fmt.Printf("The capacity of s8: %d\n", cap(s8))
+
 	s8a := append(s8, make([]int, 11)...)
 	fmt.Printf("s8a: len: %d, cap: %d\n", len(s8a), cap(s8a))
+
 	s8b := append(s8a, make([]int, 23)...)
 	fmt.Printf("s8b: len: %d, cap: %d\n", len(s8b), cap(s8b))
+
 	s8c := append(s8b, make([]int, 45)...)
 	fmt.Printf("s8c: len: %d, cap: %d\n", len(s8c), cap(s8c))
 }

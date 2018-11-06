@@ -25,8 +25,8 @@ func main() {
 	//_ = badMap4
 
 	// 示例5。
-	//var badMap5 map[[1][2][3][]string]int // 这里会引发编译错误。
-	//_ = badMap5
+	var badMap5 map[[1][2][3][]string]int // 这里会引发编译错误。
+	_ = badMap5
 
 	// 示例6。
 	//type BadKey2Field1 struct {

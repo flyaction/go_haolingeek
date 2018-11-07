@@ -7,7 +7,7 @@ func main() {
 	// 发送方。
 	go func() {
 		for i := 0; i < 10; i++ {
-			fmt.Printf("Sender: sending element %v...\n", i)
+			fmt.Printf("Sender: sending element %v...%d \n", i, len(ch1))
 			ch1 <- i
 		}
 		fmt.Println("Sender: close the channel...")

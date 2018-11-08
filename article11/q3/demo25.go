@@ -4,7 +4,7 @@ import "fmt"
 
 var channels = [3]chan int{
 	nil,
-	make(chan int),
+	make(chan int, 2),
 	nil,
 }
 

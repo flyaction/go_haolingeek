@@ -40,7 +40,7 @@ func example1() {
 func example2() {
 	intChan := make(chan int, 1)
 	// 一秒后关闭通道。
-	time.AfterFunc(time.Second, func() {
+	time.AfterFunc(3*time.Second, func() {
 		close(intChan)
 	})
 	select {

@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Printer func(content string) (n int, err error)
 
@@ -9,6 +11,7 @@ func printToStd(content string) (bytesNum int, err error) {
 }
 
 func main() {
+
 	var p Printer
 	p = printToStd
 	p("something")

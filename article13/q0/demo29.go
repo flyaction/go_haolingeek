@@ -15,9 +15,7 @@ type AnimalCategory struct {
 }
 
 func (ac AnimalCategory) String() string {
-	return fmt.Sprintf("%s%s%s%s%s%s%s",
-		ac.kingdom, ac.phylum, ac.class, ac.order,
-		ac.family, ac.genus, ac.species)
+	return fmt.Sprintf("%s%s%s%s%s%s%s", ac.kingdom, ac.phylum, ac.class, ac.order, ac.family, ac.genus, ac.species)
 }
 
 // 示例2。
@@ -28,8 +26,7 @@ type Animal struct {
 
 // 该方法会"屏蔽"掉嵌入字段中的同名方法。
 func (a Animal) String() string {
-	return fmt.Sprintf("%s (category: %s)",
-		a.scientificName, a.AnimalCategory)
+	return fmt.Sprintf("%s (category: %s)", a.scientificName, a.AnimalCategory)
 }
 
 // 示例3。
@@ -40,8 +37,7 @@ type Cat struct {
 
 // 该方法会"屏蔽"掉嵌入字段中的同名方法。
 func (cat Cat) String() string {
-	return fmt.Sprintf("%s (category: %s, name: %q)",
-		cat.scientificName, cat.Animal.AnimalCategory, cat.name)
+	return fmt.Sprintf("%s (category: %s, name: %q)", cat.scientificName, cat.Animal.AnimalCategory, cat.name)
 }
 
 func main() {

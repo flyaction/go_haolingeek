@@ -37,8 +37,7 @@ func (cat Cat) Category() string {
 }
 
 func (cat Cat) String() string {
-	return fmt.Sprintf("%s (category: %s, name: %q)",
-		cat.scientificName, cat.category, cat.name)
+	return fmt.Sprintf("%s (category: %s, name: %q)", cat.scientificName, cat.category, cat.name)
 }
 
 func main() {

@@ -32,8 +32,7 @@ func main() {
 	var pet Pet = dog
 	dog.SetName("monster")
 	fmt.Printf("The dog's name is %q.\n", dog.Name())
-	fmt.Printf("This pet is a %s, the name is %q.\n",
-		pet.Category(), pet.Name())
+	fmt.Printf("This pet is a %s, the name is %q.\n", pet.Category(), pet.Name())
 	fmt.Println()
 
 	// 示例2。
@@ -52,6 +51,5 @@ func main() {
 	pet = &dog
 	dog.SetName("monster")
 	fmt.Printf("The dog's name is %q.\n", dog.Name())
-	fmt.Printf("This pet is a %s, the name is %q.\n",
-		pet.Category(), pet.Name())
+	fmt.Printf("This pet is a %s, the name is %q.\n", pet.Category(), pet.Name())
 }

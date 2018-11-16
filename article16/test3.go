@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+
 	count := 0
 
 	trigger := func(i int, fn func()) {

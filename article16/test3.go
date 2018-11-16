@@ -2,26 +2,25 @@ package main
 
 import (
 	"fmt"
-	"sync/atomic"
 	"time"
 )
 
 func main() {
-	var count uint32
+	count := 0
 
-	trigger := func(i uint32, fn func()) {
+	trigger := func(i int, fn func()) {
 		for {
-			if n := atomic.LoadUint32(&count); n == i {
+			if n := count; n == i {
 				fn()
-				atomic.AddUint32(&count, 1) //count++
+				count++
 				break
 			}
 			time.Sleep(time.Nanosecond)
 		}
 	}
 
-	for i := uint32(0); i < 10; i++ {
-		go func(i uint32) {
+	for i := 0; i < 10; i++ {
+		go func(i int) {
 			fn := func() {
 				fmt.Println(i)
 			}

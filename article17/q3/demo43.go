@@ -27,7 +27,7 @@ func main() {
 
 	// 示例3。
 	//value6 := interface{}(byte(127))
-	//switch t := value6.(type) { // 这条语句无法编译通过。
+	//switch t := value6.(type) { // 这条语句无法编译通过。   byte类型是unit8类型的别名类型
 	//case uint8, uint16:
 	//	fmt.Println("uint8 or uint16")
 	//case byte:

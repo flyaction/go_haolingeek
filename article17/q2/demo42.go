@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	// 示例1。
 	//value1 := [...]int8{0, 1, 2, 3, 4, 5, 6}
-	//switch 1 + 3 { // 这条语句无法编译通过。
+	//switch 1 + 3 { // 这条语句无法编译通过。  // 1+3=4,4的类型为int，除非改成int8(1+3)
 	//case value1[0], value1[1]:
 	//	fmt.Println("0 or 1")
 	//case value1[2], value1[3]:

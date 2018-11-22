@@ -7,8 +7,16 @@ import (
 	"runtime"
 )
 
+/*
+	.(type)
+	理解是获取接口实例实际的类型指针，以此调用实例所有可调用的方法，包括接口方法及自有方法。
+	需要注意的是该写法必须与switch case联合使用，case中列出实现该接口的类型。
+
+*/
+
 // underlyingError 会返回已知的操作系统相关错误的潜在错误值。
 func underlyingError(err error) error {
+
 	switch err := err.(type) {
 	case *os.PathError:
 		return err.Err
@@ -31,11 +39,11 @@ func main() {
 	}
 	// 人为制造 *os.PathError 类型的错误。
 	r.Close()
+
 	_, err = w.Write([]byte("hi"))
 	uError := underlyingError(err)
-	fmt.Printf("underlying error: %s (type: %T)\n",
-		uError, uError)
-	fmt.Println()
+	fmt.Printf("---underlying error: %s (type: %T)\n", uError, uError)
+	fmt.Println("-------------")
 
 	// 示例2。
 	paths := []string{
@@ -112,6 +120,7 @@ func main() {
 			fmt.Printf("error(other)[%d]: %s\n", i, err)
 		}
 	}
+
 	{
 		index = 0
 		err = os.Mkdir(paths2[index], 0700)

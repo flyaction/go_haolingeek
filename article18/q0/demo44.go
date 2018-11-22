@@ -30,6 +30,7 @@ func main() {
 	// 示例2。
 	err1 := fmt.Errorf("invalid content: %s", "#$%")
 	err2 := errors.New(fmt.Sprintf("invalid content: %s", "#$%"))
+
 	if err1.Error() == err2.Error() {
 		fmt.Println("The error messages in err1 and err2 are the same.")
 	}

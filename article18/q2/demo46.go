@@ -32,7 +32,7 @@ func (e Errno) Error() string {
 func main() {
 	var err error
 	// 示例1。
-	_, err = exec.LookPath(os.DevNull)
+	_, err = exec.LookPath(os.DevNull) //// 肯定存在的目录。
 	fmt.Printf("error: %s\n", err)
 	if execErr, ok := err.(*exec.Error); ok {
 		execErr.Name = os.TempDir()

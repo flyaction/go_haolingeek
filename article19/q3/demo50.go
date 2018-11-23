@@ -31,3 +31,20 @@ func main() {
 
 	fmt.Println("Exit function main.")
 }
+
+/*
+	panic
+	停止当前函数执行
+	一直向上返回，执行每一层的defer
+	如果没有遇见recover，程序退出
+
+	recover
+	仅在defer调用中使用
+	获取panic的值
+	如果无法处理，可重新panic
+
+
+	意料之中的：使用error 。如文件打不开
+	意料之外的: 使用panic 。如数组越界
+
+*/

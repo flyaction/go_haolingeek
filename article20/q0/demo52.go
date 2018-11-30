@@ -14,6 +14,7 @@ func init() {
 
 func main() {
 	flag.Parse()
+
 	greeting, err := hello(name)
 	if err != nil {
 		fmt.Printf("error: %s\n", err)

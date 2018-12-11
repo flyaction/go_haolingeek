@@ -43,8 +43,7 @@ func main() {
 			}()
 			for j := 1; j <= max2; j++ {
 				// 准备数据。
-				header := fmt.Sprintf("\n[id: %d, iteration: %d]",
-					id, j)
+				header := fmt.Sprintf("\n[id: %d, iteration: %d]", id, j)
 				data := fmt.Sprintf(" %d", id*j)
 				// 写入数据。
 				if protecting > 0 {

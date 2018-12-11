@@ -23,11 +23,9 @@ func main() {
 		for mailbox == 1 {
 			sendCond.Wait()
 		}
-		log.Printf("sender [%d-%d]: the mailbox is empty.",
-			id, index)
+		log.Printf("sender [%d-%d]: the mailbox is empty.", id, index)
 		mailbox = 1
-		log.Printf("sender [%d-%d]: the letter has been sent.",
-			id, index)
+		log.Printf("sender [%d-%d]: the letter has been sent.", id, index)
 		lock.Unlock()
 		recvCond.Broadcast()
 	}
@@ -38,11 +36,9 @@ func main() {
 		for mailbox == 0 {
 			recvCond.Wait()
 		}
-		log.Printf("receiver [%d-%d]: the mailbox is full.",
-			id, index)
+		log.Printf("receiver [%d-%d]: the mailbox is full.", id, index)
 		mailbox = 0
-		log.Printf("receiver [%d-%d]: the letter has been received.",
-			id, index)
+		log.Printf("receiver [%d-%d]: the letter has been received.", id, index)
 		lock.Unlock()
 		sendCond.Signal() // 确定只会有一个发信的goroutine。
 	}

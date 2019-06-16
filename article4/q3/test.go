@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 
-	n, m := "xd", "action"
+	a, l, n, m := "dong", "xing", "xd", "action"
 
-	fmt.Print(n, "\n", m)
+	fmt.Print(a, "\n", l, "\n", n, "\n", m)
 }

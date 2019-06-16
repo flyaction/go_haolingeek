@@ -16,8 +16,7 @@ func main() {
 		fmt.Printf("Error: unsupported container type: %T\n", container)
 		return
 	}
-	fmt.Printf("The element is %q. (container type: %T)\n",
-		container[1], container)
+	fmt.Printf("The element is %q. (container type: %T)\n", container[1], container)
 
 	// 方式2。
 	elem, err := getElement(container)
@@ -25,8 +24,7 @@ func main() {
 		fmt.Printf("Error: %s\n", err)
 		return
 	}
-	fmt.Printf("The element is %q. (container type: %T)\n",
-		elem, container)
+	fmt.Printf("The element is %q. (container type: %T)\n", elem, container)
 }
 
 func getElement(containerI interface{}) (elem string, err error) {

@@ -13,11 +13,11 @@ var name string
 
 func init() {
 	// 方式2。
-	flag.CommandLine = flag.NewFlagSet("", flag.ExitOnError)
-	flag.CommandLine.Usage = func() {
-		fmt.Fprintf(os.Stderr, "Usage of %s:\n", "question")
-		flag.PrintDefaults()
-	}
+	//flag.CommandLine = flag.NewFlagSet("", flag.ExitOnError)
+	//flag.CommandLine.Usage = func() {
+	//	fmt.Fprintf(os.Stderr, "Usage of %s:\n", "question")
+	//	flag.PrintDefaults()
+	//}
 	// 方式3。
 	//cmdLine.StringVar(&name, "name", "everyone", "The greeting object.")
 	flag.StringVar(&name, "name", "everyone", "The greeting object.")
@@ -25,10 +25,10 @@ func init() {
 
 func main() {
 	// 方式1。
-	//flag.Usage = func() {
-	//	fmt.Fprintf(os.Stderr, "Usage of %s:\n", "question")
-	//	flag.PrintDefaults()
-	//}
+	flag.Usage = func() {
+		fmt.Fprintf(os.Stderr, "Usage of %s:\n", "question")
+		flag.PrintDefaults()
+	}
 	// 方式3。
 	//cmdLine.Parse(os.Args[1:])
 	flag.Parse()

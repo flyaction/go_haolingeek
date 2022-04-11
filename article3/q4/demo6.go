@@ -2,8 +2,8 @@ package main
 
 import (
 	"flag"
-	"haolingeek/article3/q4/lib"
-	//in "puzzlers/article3/q4/lib/internal" // 此行无法通过编译。
+	"study/article3/q4/lib"
+	//in "study/article3/q4/lib/internal" // 此行无法通过编译。
 	//"os"
 )
 

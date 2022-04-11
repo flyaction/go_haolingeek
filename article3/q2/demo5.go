@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"haolingeek/article3/q2/lib"
+	"study/article3/q2/lib"
 )
 
 var name string

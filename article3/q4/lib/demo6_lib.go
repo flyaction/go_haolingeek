@@ -1,8 +1,8 @@
 package lib
 
 import (
-	in "haolingeek/article3/q4/lib/internal"
 	"os"
+	in "study/article3/q4/lib/internal" // in => alias name
 )
 
 func Hello(name string) {

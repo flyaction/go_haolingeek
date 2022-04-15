@@ -3,12 +3,14 @@ package main
 import (
 	"flag"
 	"fmt"
+	"reflect"
 )
 
 func main() {
 	var name = getTheFlag()
 	flag.Parse()
 	fmt.Printf("Hello, %v!\n", *name)
+	fmt.Println(reflect.TypeOf(name))
 }
 
 func getTheFlag() *string {

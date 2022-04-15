@@ -8,8 +8,9 @@ import (
 )
 
 func main() {
+
 	var err error
-	n, err := io.WriteString(os.Stdout, "Hello, everyone!\n") // 这里对`err`进行了重声明。
+	n, err := io.WriteString(os.Stdout, "Hello, everyone!\n") // 这里对`err`进行了重声明。 17个字符
 
 	fmt.Print(reflect.TypeOf(err), "\n")
 	fmt.Print(reflect.TypeOf(n), "\n")

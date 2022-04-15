@@ -19,6 +19,6 @@ func main() {
 	flag.Parse()
 
 	fmt.Printf("Hello, %v!\n", name)
-	fmt.Print("\n")
-	fmt.Print(reflect.TypeOf(name))
+	fmt.Println()
+	fmt.Println(reflect.TypeOf(name))
 }

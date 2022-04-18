@@ -9,6 +9,8 @@ var container = []string{"zero", "one1", "two"}
 
 func main() {
 
+	fmt.Printf("The element is %q.\n", container[1])
+
 	fmt.Print(reflect.TypeOf(container))
 	fmt.Print("\n")
 

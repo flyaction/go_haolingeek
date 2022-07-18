@@ -14,5 +14,5 @@ func main() {
 
 	var p Printer
 	p = printToStd
-	p("something")
+	_, _ = p("something")
 }

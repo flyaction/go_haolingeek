@@ -50,18 +50,18 @@ func (dog Dog) Category() string {
 func main() {
 	petTag := PetTag{name: "little pig"}
 	_, ok := interface{}(petTag).(Named)
-	fmt.Printf("PetTag implements interface Named: %v\n", ok)
+	fmt.Printf("PetTag implements interface Named: %v\n", ok) //true
 
 	dog := Dog{
 		PetTag:         petTag,
 		scientificName: "Labrador Retriever",
 	}
 	_, ok = interface{}(dog).(Animal)
-	fmt.Printf("Dog implements interface Animal: %v\n", ok)
+	fmt.Printf("Dog implements interface Animal: %v\n", ok) //true
 
 	_, ok = interface{}(dog).(Named)
-	fmt.Printf("Dog implements interface Named: %v\n", ok)
+	fmt.Printf("Dog implements interface Named: %v\n", ok) //true
 
 	_, ok = interface{}(dog).(Pet)
-	fmt.Printf("Dog implements interface Pet: %v\n", ok)
+	fmt.Printf("Dog implements interface Pet: %v\n", ok) //true
 }

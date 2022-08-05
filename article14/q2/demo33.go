@@ -66,7 +66,7 @@ func main() {
 
 	pet = wrap(dog2)
 	if pet == nil {
-		fmt.Println("The pet is nil.")
+		fmt.Println("The pet is nil.") // 输出结果
 	} else {
 		fmt.Println("The pet is not nil.")
 	}

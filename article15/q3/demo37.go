@@ -34,6 +34,7 @@ func main() {
 	namePtr := dogPtr + unsafe.Offsetof(dogP.name)
 	nameP := (*string)(unsafe.Pointer(namePtr))
 
+	fmt.Println(dogPtr)
 	fmt.Println(nameP)
 	fmt.Println(&(dogP.name))
 

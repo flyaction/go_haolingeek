@@ -24,9 +24,9 @@ func main() {
 	tmp := New("little pig")
 	tmp.SetName("monster")
 
-	// 示例2。  例外
-
+	// 示例2。例外  字典索引结果值不可寻址，但是可以使用自增自增表达式
 	map[string]int{"the": 0, "word": 0, "counter": 0}["word"]++
+
 	map1 := map[string]int{"the": 0, "word": 0, "counter": 0}
 
 	map1["word"]++

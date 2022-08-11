@@ -29,6 +29,7 @@ func main() {
 		}(i)
 	}
 
+	//让主goroutine最后一个运行完毕
 	trigger(10, func() {})
 
 }

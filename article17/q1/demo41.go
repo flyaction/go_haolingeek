@@ -14,7 +14,7 @@ func main() {
 	fmt.Println()
 
 	// 示例2。
-	numbers2 := [...]int{1, 2, 3, 4, 5, 6} //数组
+	numbers2 := [...]int{1, 2, 3, 4, 5, 6} //数组 值类型
 	maxIndex2 := len(numbers2) - 1
 	for i, e := range numbers2 {
 		if i == maxIndex2 {
@@ -27,7 +27,7 @@ func main() {
 	fmt.Println()
 
 	// 示例3。
-	numbers3 := []int{1, 2, 3, 4, 5, 6}
+	numbers3 := []int{1, 2, 3, 4, 5, 6} //切片 引用类型 number3[i]的结果值一直在变
 	maxIndex3 := len(numbers2) - 1
 	for i, e := range numbers3 {
 		if i == maxIndex3 {

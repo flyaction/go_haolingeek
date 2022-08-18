@@ -25,6 +25,7 @@ func underlyingError(err error) error {
 	case *os.SyscallError:
 		return err.Err
 	case *exec.Error:
+		fmt.Println("==other error==")
 		return err.Err
 	}
 	return err

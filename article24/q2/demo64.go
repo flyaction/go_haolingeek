@@ -17,22 +17,22 @@ func main() {
 	v1 := [...]int{1, 2, 3}
 	fmt.Printf("Store %v to box.\n", v1)
 	box.Store(v1)
-	fmt.Printf("The value load from box is %v.\n", box.Load())
-	fmt.Printf("The value load from box2 is %v.\n", box2.Load())
+	fmt.Printf("The value load from box is %v.\n", box.Load())   // [1 2 3]
+	fmt.Printf("The value load from box2 is %v.\n", box2.Load()) // nil
 	fmt.Println()
 
 	// 示例2。
 	v2 := "123"
 	fmt.Printf("Store %q to box2.\n", v2)
-	box2.Store(v2) // 这里并不会引发panic。
-	fmt.Printf("The value load from box is %v.\n", box.Load())
-	fmt.Printf("The value load from box2 is %q.\n", box2.Load())
+	box2.Store(v2)                                               // 这里并不会引发panic。
+	fmt.Printf("The value load from box is %v.\n", box.Load())   // [1 2 3]
+	fmt.Printf("The value load from box2 is %q.\n", box2.Load()) // 123
 	fmt.Println()
 
 	// 示例3。
 	fmt.Println("Copy box to box3.")
-	box3 := box // 原子值在真正使用后不应该被复制！
-	fmt.Printf("The value load from box3 is %v.\n", box3.Load())
+	box3 := box                                                  // 原子值在真正使用后不应该被复制！
+	fmt.Printf("The value load from box3 is %v.\n", box3.Load()) // [1 2 3]
 	v3 := 123
 	fmt.Printf("Store %d to box2.\n", v3)
 	//box3.Store(v3) // 这里会引发一个panic，报告存储值的类型不一致。

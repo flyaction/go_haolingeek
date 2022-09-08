@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	// 示例1。 只执行首次被调用时传入的那个函数
+	// 示例1。 sync.Once只执行首次被调用时传入的那个函数
 	var counter uint32
 	var once sync.Once
 	once.Do(func() {
@@ -22,7 +22,7 @@ func main() {
 	fmt.Printf("The counter: %d\n", counter)
 	fmt.Println()
 
-	// 示例2。
+	// 示例2。sync.Once只执行首次被调用时传入的那个函数
 	once = sync.Once{}
 	var wg sync.WaitGroup
 	wg.Add(3)

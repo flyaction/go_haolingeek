@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	// 示例1。
+	// 示例1。 只执行首次被调用时传入的那个函数
 	var counter uint32
 	var once sync.Once
 	once.Do(func() {

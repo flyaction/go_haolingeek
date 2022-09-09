@@ -40,6 +40,7 @@ func addNum(numP *int32, id int, deferFunc func()) {
 		currNum := atomic.LoadInt32(numP)
 		newNum := currNum + 1
 		time.Sleep(time.Millisecond * 200)
+		// numP 与 currNum 比较，如果相等，则用c的值替换a的值
 		if atomic.CompareAndSwapInt32(numP, currNum, newNum) {
 			fmt.Printf("The number: %d [%d-%d]\n", newNum, id, i)
 			break

@@ -26,7 +26,7 @@ func main() {
 	node1, cancelFunc1 := context.WithCancel(rootNode)
 	defer cancelFunc1()
 
-	// 示例1。
+	// 示例1。 keys[2]  nil
 	node2 := context.WithValue(node1, keys[0], values[0])
 	node3 := context.WithValue(node2, keys[1], values[1])
 	fmt.Printf("The value of the key %v found in the node3: %v\n",
@@ -37,7 +37,7 @@ func main() {
 		keys[2], node3.Value(keys[2]))
 	fmt.Println()
 
-	// 示例2。
+	// 示例2。 向上查找，无nil
 	node4, _ := context.WithCancel(node3)
 	node5, _ := context.WithTimeout(node4, time.Hour)
 	fmt.Printf("The value of the key %v found in the node5: %v\n",
@@ -46,7 +46,7 @@ func main() {
 		keys[1], node5.Value(keys[1]))
 	fmt.Println()
 
-	// 示例3。
+	// 示例3。 无nil
 	node6 := context.WithValue(node5, keys[2], values[2])
 	fmt.Printf("The value of the key %v found in the node6: %v\n",
 		keys[0], node6.Value(keys[0]))
@@ -54,7 +54,7 @@ func main() {
 		keys[2], node6.Value(keys[2]))
 	fmt.Println()
 
-	// 示例4。
+	// 示例4。keys[2] 没在node5的父节点里，返回nil
 	node6Branch := context.WithValue(node5, keys[3], values[3])
 	fmt.Printf("The value of the key %v found in the node6Branch: %v\n",
 		keys[1], node6Branch.Value(keys[1]))
@@ -64,7 +64,7 @@ func main() {
 		keys[3], node6Branch.Value(keys[3]))
 	fmt.Println()
 
-	// 示例5。
+	// 示例5。 keys[3]返回nil
 	node7, _ := context.WithCancel(node6)
 	node8, _ := context.WithTimeout(node7, time.Hour)
 	fmt.Printf("The value of the key %v found in the node8: %v\n",

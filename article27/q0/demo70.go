@@ -66,8 +66,7 @@ func GetBuffer() Buffer {
 func main() {
 	buf := GetBuffer()
 	defer buf.Free()
-	buf.Write("A Pool is a set of temporary objects that" +
-		"may be individually saved and retrieved.")
+	buf.Write("A Pool is a set of temporary objects that" + "may be individually saved and retrieved.")
 	buf.Write("A Pool is safe for use by multiple goroutines simultaneously.")
 	buf.Write("A Pool must not be copied after first use.")
 

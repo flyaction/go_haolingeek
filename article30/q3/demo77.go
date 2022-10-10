@@ -19,16 +19,16 @@ func main() {
 	n, _ := reader1.Read(buf1)
 	fmt.Printf("%d bytes were read. (call Read)\n", n)
 	fmt.Printf("The reading index in reader: %d\n",
-		reader1.Size()-int64(reader1.Len()))
+		reader1.Size()-int64(reader1.Len())) //此时len=119-47, 119-(119-47)=47
 	fmt.Println()
 
-	// 示例2。
+	// 示例2。 ReadAt方法不会依据已读计数进行读取，也不会在读取后更新它
 	buf2 := make([]byte, 21)
 	offset1 := int64(64)
 	n, _ = reader1.ReadAt(buf2, offset1)
 	fmt.Printf("%d bytes were read. (call ReadAt, offset: %d)\n", n, offset1)
 	fmt.Printf("The reading index in reader: %d\n",
-		reader1.Size()-int64(reader1.Len()))
+		reader1.Size()-int64(reader1.Len())) // 还是47，ReadAt方法不更新已读计数
 	fmt.Println()
 
 	// 示例3。

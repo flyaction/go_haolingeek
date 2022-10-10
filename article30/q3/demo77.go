@@ -33,14 +33,14 @@ func main() {
 
 	// 示例3。
 	offset2 := int64(17)
-	expectedIndex := reader1.Size() - int64(reader1.Len()) + offset2
-	fmt.Printf("Seek with offset %d and whence %d ...\n", offset2, io.SeekCurrent)
-	readingIndex, _ := reader1.Seek(offset2, io.SeekCurrent)
-	fmt.Printf("The reading index in reader: %d (returned by Seek)\n", readingIndex)
-	fmt.Printf("The reading index in reader: %d (computed by me)\n", expectedIndex)
+	expectedIndex := reader1.Size() - int64(reader1.Len()) + offset2                 //47 + 17 = 64
+	fmt.Printf("Seek with offset %d and whence %d ...\n", offset2, io.SeekCurrent)   // 17,1
+	readingIndex, _ := reader1.Seek(offset2, io.SeekCurrent)                         //重新计数 ,之前47 +17 =64
+	fmt.Printf("The reading index in reader: %d (returned by Seek)\n", readingIndex) // 64
+	fmt.Printf("The reading index in reader: %d (computed by me)\n", expectedIndex)  // 64
 
 	n, _ = reader1.Read(buf2)
-	fmt.Printf("%d bytes were read. (call Read)\n", n)
+	fmt.Printf("%d bytes were read. (call Read)\n", n) //21
 	fmt.Printf("The reading index in reader: %d\n",
-		reader1.Size()-int64(reader1.Len()))
+		reader1.Size()-int64(reader1.Len())) //119-(119-47-17-21) = 85
 }

@@ -9,10 +9,8 @@ func main() {
 	// 示例1。
 	var contents string
 	buffer1 := bytes.NewBufferString(contents)
-	fmt.Printf("The length of new buffer with contents %q: %d\n",
-		contents, buffer1.Len())
-	fmt.Printf("The capacity of new buffer with contents %q: %d\n",
-		contents, buffer1.Cap())
+	fmt.Printf("The length of new buffer with contents %q: %d\n", contents, buffer1.Len())
+	fmt.Printf("The capacity of new buffer with contents %q: %d\n", contents, buffer1.Cap())
 	fmt.Println()
 
 	contents = "12345"
@@ -39,10 +37,8 @@ func main() {
 	// 示例2。
 	contents = "abcdefghijk"
 	buffer2 := bytes.NewBufferString(contents)
-	fmt.Printf("The length of new buffer with contents %q: %d\n",
-		contents, buffer2.Len())
-	fmt.Printf("The capacity of new buffer with contents %q: %d\n",
-		contents, buffer2.Cap())
+	fmt.Printf("The length of new buffer with contents %q: %d\n", contents, buffer2.Len())
+	fmt.Printf("The capacity of new buffer with contents %q: %d\n", contents, buffer2.Cap())
 	fmt.Println()
 
 	n := 10

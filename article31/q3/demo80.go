@@ -30,7 +30,7 @@ func main() {
 
 	value := byte('X')
 	fmt.Printf("Set a byte in the unread bytes to %v ...\n", value)
-	unreadBytes[len(unreadBytes)-2] = value
+	unreadBytes[len(unreadBytes)-2] = value // len(unreadBytes)-2  = 8-2 = 6
 	fmt.Printf("The unread bytes of the buffer: %v\n", buffer1.Bytes())
 	fmt.Println()
 

@@ -9,8 +9,7 @@ func main() {
 	// 示例1。
 	contents := "ab"
 	buffer1 := bytes.NewBufferString(contents)
-	fmt.Printf("The capacity of new buffer with contents %q: %d\n",
-		contents, buffer1.Cap())
+	fmt.Printf("The capacity of new buffer with contents %q: %d\n", contents, buffer1.Cap())
 	fmt.Println()
 
 	unreadBytes := buffer1.Bytes()
@@ -50,8 +49,7 @@ func main() {
 	// Next方法返回的后续字节切片也存在相同的问题。
 	contents = "12"
 	buffer2 := bytes.NewBufferString(contents)
-	fmt.Printf("The capacity of new buffer with contents %q: %d\n",
-		contents, buffer2.Cap())
+	fmt.Printf("The capacity of new buffer with contents %q: %d\n", contents, buffer2.Cap())
 	fmt.Println()
 
 	nextBytes := buffer2.Next(2)

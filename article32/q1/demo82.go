@@ -24,7 +24,7 @@ func main() {
 	executeIfNoErr(err, func() {
 		fmt.Printf("Read(%d): %q\n", n, buf1[:n])
 		offset1 = int64(53)
-		index1, err = reader1.Seek(offset1, io.SeekCurrent)
+		index1, err = reader1.Seek(offset1, io.SeekCurrent) // 7+53 =60
 	})
 	executeIfNoErr(err, func() {
 		fmt.Printf("The new index after seeking from current with offset %d: %d\n",
@@ -32,7 +32,7 @@ func main() {
 		n, err = reader1.Read(buf1)
 	})
 	executeIfNoErr(err, func() {
-		fmt.Printf("Read(%d): %q\n", n, buf1[:n])
+		fmt.Printf("Read(%d): %q\n", n, buf1[:n]) // 7 primary
 	})
 	fmt.Println()
 

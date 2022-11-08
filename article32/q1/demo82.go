@@ -53,6 +53,7 @@ func main() {
 	fmt.Println()
 
 	// 示例3。
+	fmt.Println("示例3=============================")
 	reader1.Reset(comment)
 	offset2 := int64(56)
 	num2 := int64(72)
@@ -68,6 +69,7 @@ func main() {
 	fmt.Println()
 
 	// 示例4。
+	fmt.Println("示例4=============================")
 	reader1.Reset(comment)
 	writer1 := new(strings.Builder)
 	fmt.Println("New a tee reader with reader1 and writer1 ...")
@@ -82,6 +84,7 @@ func main() {
 	fmt.Println()
 
 	// 示例5。
+	fmt.Println("示例5=============================")
 	reader5a := strings.NewReader(
 		"MultiReader returns a Reader that's the logical concatenation of " +
 			"the provided input readers.")
@@ -102,6 +105,7 @@ func main() {
 	fmt.Println()
 
 	// 示例6。
+	fmt.Println("示例6=============================")
 	fmt.Println("New a synchronous in-memory pipe ...")
 	pReader, pWriter := io.Pipe()
 	_ = interface{}(pReader).(io.ReadCloser)

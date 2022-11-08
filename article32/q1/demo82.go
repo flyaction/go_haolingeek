@@ -16,6 +16,7 @@ func main() {
 		"plus some other related primitives."
 
 	// 示例1。
+	fmt.Println("示例1=============================")
 	fmt.Println("New a string reader and name it \"reader1\" ...")
 	reader1 := strings.NewReader(comment)
 	buf1 := make([]byte, 7)
@@ -34,9 +35,10 @@ func main() {
 	executeIfNoErr(err, func() {
 		fmt.Printf("Read(%d): %q\n", n, buf1[:n]) // 7 primary
 	})
-	fmt.Println()
 
-	// 示例2。
+	// 示例2。 限制读取7个LimitReader
+	fmt.Println("示例2=============================")
+
 	reader1.Reset(comment)
 	num1 := int64(7)
 	fmt.Printf("New a limited reader with reader1 and number %d ...\n", num1)

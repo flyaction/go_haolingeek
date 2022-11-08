@@ -52,13 +52,13 @@ func main() {
 	}
 	fmt.Println()
 
-	// 示例3。
+	// 示例3。 读取某一段 起始位置+数量
 	fmt.Println("示例3=============================")
 	reader1.Reset(comment)
 	offset2 := int64(56)
 	num2 := int64(72)
 	fmt.Printf("New a section reader with reader1, offset %d and number %d ...\n", offset2, num2)
-	reader3 := io.NewSectionReader(reader1, offset2, num2)
+	reader3 := io.NewSectionReader(reader1, offset2, num2) //起始位置 + 数量
 	buf3 := make([]byte, 20)
 	for i := 0; i < 5; i++ {
 		n, err = reader3.Read(buf3)

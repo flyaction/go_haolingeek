@@ -31,7 +31,7 @@ func main() {
 	if err != nil {
 		fmt.Printf("error: %v\n", err)
 	}
-	fmt.Printf("Peeked contents(%d): %q\n", len(bytes), bytes)
+	fmt.Printf("Peeked contents(%d): %q\n", len(bytes), bytes) //已读计数不变
 	fmt.Printf("The number of unread bytes in the buffer: %d\n", reader1.Buffered())
 	fmt.Println()
 

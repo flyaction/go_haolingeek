@@ -76,7 +76,7 @@ func main() {
 	fmt.Printf("The number of unread bytes in the buffer: %d\n", reader1.Buffered())
 	fmt.Println()
 
-	// 示例4。
+	// 示例4。ReadSlice 200
 	fmt.Println("示例4==========================")
 	fmt.Println("Reset the basic reader ...")
 	basicReader.Reset(comment)
@@ -96,7 +96,7 @@ func main() {
 	fmt.Println()
 
 	fmt.Print("[ About 'ReadBytes' method ]\n\n")
-	// 示例5。
+	// 示例5。ReadBytes 213
 	fmt.Println("示例5==========================")
 	fmt.Println("Reset the basic reader ...")
 	basicReader.Reset(comment)

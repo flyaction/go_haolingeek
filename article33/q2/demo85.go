@@ -22,6 +22,7 @@ func main() {
 
 	fmt.Print("[ About 'Peek' method ]\n\n")
 	// 示例1。
+	fmt.Println("示例1==========================")
 	peekNum := 38
 	fmt.Printf("Peek %d bytes ...\n", peekNum)
 	bytes, err := reader1.Peek(peekNum)
@@ -34,6 +35,7 @@ func main() {
 
 	fmt.Print("[ About 'Read' method ]\n\n")
 	// 示例2。
+	fmt.Println("示例2==========================")
 	readNum := 38
 	buf1 := make([]byte, readNum)
 	fmt.Printf("Read %d bytes ...\n", readNum)
@@ -47,6 +49,7 @@ func main() {
 
 	fmt.Print("[ About 'ReadSlice' method ]\n\n")
 	// 示例3。
+	fmt.Println("示例3==========================")
 	fmt.Println("Reset the basic reader ...")
 	basicReader.Reset(comment)
 	fmt.Println("Reset the buffered reader ...")
@@ -74,6 +77,7 @@ func main() {
 	fmt.Println()
 
 	// 示例4。
+	fmt.Println("示例4==========================")
 	fmt.Println("Reset the basic reader ...")
 	basicReader.Reset(comment)
 	size = 200
@@ -93,6 +97,7 @@ func main() {
 
 	fmt.Print("[ About 'ReadBytes' method ]\n\n")
 	// 示例5。
+	fmt.Println("示例5==========================")
 	fmt.Println("Reset the basic reader ...")
 	basicReader.Reset(comment)
 	size = 200
@@ -117,6 +122,7 @@ func main() {
 
 func showContentsLeak(comment string) {
 	// 示例6。
+	fmt.Println("示例6==========================")
 	basicReader := strings.NewReader(comment)
 	fmt.Printf("The size of basic reader: %d\n", basicReader.Size())
 
@@ -157,6 +163,7 @@ func showContentsLeak(comment string) {
 	fmt.Println()
 
 	// 示例7。
+	fmt.Println("示例7==========================")
 	// ReadSlice方法也存在相同的问题。
 	delimiter := byte(',')
 	fmt.Printf("Read slice with delimiter %q...\n", delimiter)

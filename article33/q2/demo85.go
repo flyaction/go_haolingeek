@@ -48,7 +48,7 @@ func main() {
 	fmt.Println()
 
 	fmt.Print("[ About 'ReadSlice' method ]\n\n")
-	// 示例3。
+	// 示例3。 ReadSlice 读取 delimiter并包含这个分隔符
 	fmt.Println("示例3==========================")
 	fmt.Println("Reset the basic reader ...")
 	basicReader.Reset(comment)

@@ -17,6 +17,7 @@ func main() {
 	fmt.Println()
 
 	// 示例1。
+	fmt.Println("示例1==========================")
 	fmt.Println("New a buffered reader ...")
 	reader1 := bufio.NewReader(basicReader)
 	fmt.Printf("The default size of buffered reader: %d\n", reader1.Size())
@@ -25,6 +26,7 @@ func main() {
 	fmt.Println()
 
 	// 示例2。
+	fmt.Println("示例2==========================")
 	bytes, err := reader1.Peek(7)
 	if err != nil {
 		fmt.Printf("error: %v\n", err)
@@ -34,6 +36,7 @@ func main() {
 	fmt.Println()
 
 	// 示例3。
+	fmt.Println("示例3==========================")
 	buf1 := make([]byte, 7)
 	n, err := reader1.Read(buf1)
 	if err != nil {
@@ -44,6 +47,7 @@ func main() {
 	fmt.Println()
 
 	// 示例4。
+	fmt.Println("示例4==========================")
 	fmt.Printf("Reset the basic reader (size: %d) ...\n", len(comment))
 	basicReader.Reset(comment)
 	fmt.Printf("Reset the buffered reader (size: %d) ...\n", reader1.Size())
@@ -58,6 +62,7 @@ func main() {
 	fmt.Println()
 
 	// 示例5。
+	fmt.Println("示例5==========================")
 	fmt.Printf("Reset the basic reader (size: %d) ...\n", len(comment))
 	basicReader.Reset(comment)
 	size := 300

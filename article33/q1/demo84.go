@@ -56,7 +56,7 @@ func main() {
 	fmt.Printf("Peek %d bytes ...\n", peekNum)
 	bytes, err = reader1.Peek(peekNum)
 	if err != nil {
-		fmt.Printf("error: %v\n", err)
+		fmt.Printf("error: %v\n", err) //error: EOF
 	}
 	fmt.Printf("The number of peeked bytes: %d\n", len(bytes))
 	fmt.Println()
@@ -72,7 +72,7 @@ func main() {
 	fmt.Printf("Peek %d bytes ...\n", peekNum)
 	bytes, err = reader2.Peek(peekNum)
 	if err != nil {
-		fmt.Printf("error: %v\n", err)
+		fmt.Printf("error: %v\n", err) //error: bufio: buffer full
 	}
 	fmt.Printf("The number of peeked bytes: %d\n", len(bytes))
 }

@@ -79,8 +79,7 @@ func main() {
 	fmt.Println("New a file associated with stderr ...")
 	file3 := os.NewFile(uintptr(syscall.Stderr), "/dev/stderr")
 	if file3 != nil {
-		file3.WriteString(
-			"The Go language program writes something to stderr.\n")
+		file3.WriteString("The Go language program writes something to stderr.\n")
 	}
 	fmt.Println()
 
@@ -107,12 +106,9 @@ func main() {
 		fmt.Printf("error: %v\n", err)
 		return
 	}
-	fmt.Printf(
-		"Is there only one file descriptor for the same file in the same process? %v\n",
-		file5a.Fd() == file4.Fd())
+	fmt.Printf("Is there only one file descriptor for the same file in the same process? %v\n", file5a.Fd() == file4.Fd())
 	file5b := os.NewFile(file5a.Fd(), filePath1)
-	fmt.Printf("Can the same file descriptor represent the same file? %v\n",
-		file5b.Name() == file5a.Name())
+	fmt.Printf("Can the same file descriptor represent the same file? %v\n", file5b.Name() == file5a.Name())
 	fmt.Println()
 
 	// 示例6。

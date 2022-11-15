@@ -39,8 +39,8 @@ func main() {
 	begin, end = 0, 326
 	fmt.Printf("Write %d bytes into the writer ...\n", end-begin)
 	writer1.WriteString(comment[begin:end])
-	fmt.Printf("The number of buffered bytes: %d\n", writer1.Buffered())
-	fmt.Printf("The number of unused bytes in the buffer: %d\n", writer1.Available())
+	fmt.Printf("The number of buffered bytes: %d\n", writer1.Buffered())              // 返回 26 ， 326 - 300
+	fmt.Printf("The number of unused bytes in the buffer: %d\n", writer1.Available()) //返回 274
 	fmt.Println("Flush the buffer in the writer ...")
 	writer1.Flush()
 	fmt.Println()

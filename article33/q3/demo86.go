@@ -22,31 +22,31 @@ func main() {
 	fmt.Println()
 
 	// 示例1。
+	fmt.Println("示例1==========================")
 	begin, end := 0, 53
 	fmt.Printf("Write %d bytes into the writer ...\n", end-begin)
 	writer1.WriteString(comment[begin:end])
 	fmt.Printf("The number of buffered bytes: %d\n", writer1.Buffered())
-	fmt.Printf("The number of unused bytes in the buffer: %d\n",
-		writer1.Available())
+	fmt.Printf("The number of unused bytes in the buffer: %d\n", writer1.Available())
 	fmt.Println("Flush the buffer in the writer ...")
 	writer1.Flush()
 	fmt.Printf("The number of buffered bytes: %d\n", writer1.Buffered())
-	fmt.Printf("The number of unused bytes in the buffer: %d\n",
-		writer1.Available())
+	fmt.Printf("The number of unused bytes in the buffer: %d\n", writer1.Available())
 	fmt.Println()
 
 	// 示例2。
+	fmt.Println("示例2==========================")
 	begin, end = 0, 326
 	fmt.Printf("Write %d bytes into the writer ...\n", end-begin)
 	writer1.WriteString(comment[begin:end])
 	fmt.Printf("The number of buffered bytes: %d\n", writer1.Buffered())
-	fmt.Printf("The number of unused bytes in the buffer: %d\n",
-		writer1.Available())
+	fmt.Printf("The number of unused bytes in the buffer: %d\n", writer1.Available())
 	fmt.Println("Flush the buffer in the writer ...")
 	writer1.Flush()
 	fmt.Println()
 
 	// 示例3。
+	fmt.Println("示例3==========================")
 	basicWriter2 := &bytes.Buffer{}
 	fmt.Printf("Reset the writer with a bytes buffer(an implementation of io.ReaderFrom) ...\n")
 	writer1.Reset(basicWriter2)
@@ -54,6 +54,5 @@ func main() {
 	fmt.Println("Read data from the reader ...")
 	writer1.ReadFrom(reader)
 	fmt.Printf("The number of buffered bytes: %d\n", writer1.Buffered())
-	fmt.Printf("The number of unused bytes in the buffer: %d\n",
-		writer1.Available())
+	fmt.Printf("The number of unused bytes in the buffer: %d\n", writer1.Available())
 }

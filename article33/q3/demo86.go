@@ -45,7 +45,7 @@ func main() {
 	writer1.Flush()
 	fmt.Println()
 
-	// 示例3。
+	// 示例3。 有些时候，Write方法和ReadFrom方法会跨过缓冲区，直接把数据写进其底层写入器
 	fmt.Println("示例3==========================")
 	basicWriter2 := &bytes.Buffer{}
 	fmt.Printf("Reset the writer with a bytes buffer(an implementation of io.ReaderFrom) ...\n")

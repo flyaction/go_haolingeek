@@ -62,7 +62,7 @@ func main() {
 	paths = append(paths, filepath.Join(dir[:len(dir)-1], fileName1))
 	for _, path := range paths {
 		fmt.Printf("Create a file with path %s ...\n", path)
-		_, err := os.Create(path)
+		_, err := os.Create(path) //如果存在，会先清空原文件的内容
 		if err != nil {
 			var underlyingErr string
 			if _, ok := err.(*os.PathError); ok {

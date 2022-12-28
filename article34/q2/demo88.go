@@ -30,7 +30,7 @@ func main() {
 			"os.O_WRONLY",
 		},
 		{
-			os.O_WRONLY | os.O_APPEND,
+			os.O_WRONLY | os.O_APPEND, //os.O_APPEND:写入时将数据附加到文件
 			"os.O_WRONLY|os.O_APPEND",
 		},
 	}

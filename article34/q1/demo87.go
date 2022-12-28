@@ -10,7 +10,7 @@ import (
 	"syscall"
 )
 
-// ioTypes 代表了io代码包中的所有接口的反射类型。
+// ioTypes 代表了io代码包中的所有接口的反射类型。 no 不能专门的读取文件中的下一个字节，或者下一个Unicode字符，也不能进行任何的读回退操作
 var ioTypes = []reflect.Type{
 	reflect.TypeOf((*io.Reader)(nil)).Elem(),
 	reflect.TypeOf((*io.Writer)(nil)).Elem(),

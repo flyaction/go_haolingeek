@@ -16,17 +16,17 @@ var ioTypes = []reflect.Type{
 	reflect.TypeOf((*io.Writer)(nil)).Elem(),
 	reflect.TypeOf((*io.Closer)(nil)).Elem(),
 
-	reflect.TypeOf((*io.ByteReader)(nil)).Elem(),
-	reflect.TypeOf((*io.RuneReader)(nil)).Elem(),
+	reflect.TypeOf((*io.ByteReader)(nil)).Elem(), // no
+	reflect.TypeOf((*io.RuneReader)(nil)).Elem(), // no
 	reflect.TypeOf((*io.ReaderAt)(nil)).Elem(),
-	reflect.TypeOf((*io.Seeker)(nil)).Elem(),
-	reflect.TypeOf((*io.WriterTo)(nil)).Elem(),
-	reflect.TypeOf((*io.ByteWriter)(nil)).Elem(),
+	reflect.TypeOf((*io.Seeker)(nil)).Elem(),     // no
+	reflect.TypeOf((*io.WriterTo)(nil)).Elem(),   // no
+	reflect.TypeOf((*io.ByteWriter)(nil)).Elem(), // no
 	reflect.TypeOf((*io.WriterAt)(nil)).Elem(),
 	reflect.TypeOf((*io.ReaderFrom)(nil)).Elem(),
 
-	reflect.TypeOf((*io.ByteScanner)(nil)).Elem(),
-	reflect.TypeOf((*io.RuneScanner)(nil)).Elem(),
+	reflect.TypeOf((*io.ByteScanner)(nil)).Elem(), // no
+	reflect.TypeOf((*io.RuneScanner)(nil)).Elem(), // no
 	reflect.TypeOf((*io.ReadSeeker)(nil)).Elem(),
 	reflect.TypeOf((*io.ReadCloser)(nil)).Elem(),
 	reflect.TypeOf((*io.WriteCloser)(nil)).Elem(),

@@ -11,7 +11,7 @@ import (
 
 func main() {
 	network := "tcp"
-	host := "google.cn"
+	host := "xingdong365.com"
 	reqStrTpl := `HEAD / HTTP/1.1
 Accept: */*
 Accept-Encoding: gzip, deflate
@@ -24,6 +24,7 @@ User-Agent: Dialer/%s
 `
 
 	// 示例1。
+	fmt.Println("=示例1==================================")
 	network1 := network + "4"
 	address1 := host + ":80"
 	fmt.Printf("Dial %q with network %q ...\n", address1, network1)
@@ -53,6 +54,7 @@ User-Agent: Dialer/%s
 	fmt.Println()
 
 	// 示例2。
+	fmt.Println("=示例2==================================")
 	tlsConf := &tls.Config{
 		InsecureSkipVerify: true,
 		MinVersion:         tls.VersionTLS10,

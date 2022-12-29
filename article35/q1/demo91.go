@@ -11,7 +11,7 @@ import (
 
 func main() {
 	network := "tcp"
-	host := "xingdong365.com"
+	host := "baidu.com"
 	reqStrTpl := `HEAD / HTTP/1.1
 Accept: */*
 Accept-Encoding: gzip, deflate

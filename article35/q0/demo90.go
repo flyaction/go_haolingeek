@@ -6,8 +6,7 @@ import (
 )
 
 func main() {
-	fd1, err := syscall.Socket(
-		syscall.AF_INET, syscall.SOCK_STREAM, syscall.IPPROTO_TCP)
+	fd1, err := syscall.Socket(syscall.AF_INET, syscall.SOCK_STREAM, syscall.IPPROTO_TCP)
 	if err != nil {
 		fmt.Printf("socket error: %v\n", err)
 		return

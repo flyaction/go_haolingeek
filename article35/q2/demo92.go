@@ -37,8 +37,7 @@ func main() {
 		},
 	}
 	for _, args := range dialArgsList {
-		fmt.Printf("Dial %q with network %q and timeout %s ...\n",
-			args.address, args.network, args.timeout)
+		fmt.Printf("Dial %q with network %q and timeout %s ...\n", args.address, args.network, args.timeout)
 		ts1 := time.Now()
 		conn, err := net.DialTimeout(args.network, args.address, args.timeout)
 		ts2 := time.Now()

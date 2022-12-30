@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 	"os"
-	"puzzlers/article37/common"
-	"puzzlers/article37/common/op"
 	"runtime"
 	"runtime/pprof"
+	"study/article37/common"
+	"study/article37/common/op"
 )
 
 var (

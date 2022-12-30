@@ -52,26 +52,22 @@ func main() {
 			var logBuf strings.Builder
 			var diff time.Duration
 			defer func() {
-				logBuf.WriteString(
-					fmt.Sprintf("(elapsed time: %s)\n", diff))
+				logBuf.WriteString(fmt.Sprintf("(elapsed time: %s)\n", diff))
 				fmt.Println(logBuf.String())
 				wg.Done()
 			}()
 			url := "https://" + domain
-			logBuf.WriteString(
-				fmt.Sprintf("Send request to %q with method GET ...\n", url))
+			logBuf.WriteString(fmt.Sprintf("Send request to %q with method GET ...\n", url))
 			t1 := time.Now()
 			resp, err := myClient.Get(url)
 			diff = time.Now().Sub(t1)
 			if err != nil {
-				logBuf.WriteString(
-					fmt.Sprintf("request sending error: %v\n", err))
+				logBuf.WriteString(fmt.Sprintf("request sending error: %v\n", err))
 				return
 			}
 			defer resp.Body.Close()
 			line2 := resp.Proto + " " + resp.Status
-			logBuf.WriteString(
-				fmt.Sprintf("The first line of response:\n%s\n", line2))
+			logBuf.WriteString(fmt.Sprintf("The first line of response:\n%s\n", line2))
 		}(domain)
 	}
 	wg.Wait()

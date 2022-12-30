@@ -9,6 +9,7 @@ func main() {
 	host := "google.cn"
 
 	// 示例1。
+	fmt.Println("==示例1======================================")
 	url1 := "http://" + host
 	fmt.Printf("Send request to %q with method GET ...\n", url1)
 	resp1, err := http.Get(url1)
@@ -22,6 +23,7 @@ func main() {
 	fmt.Println()
 
 	// 示例2。
+	fmt.Println("==示例2======================================")
 	url2 := "https://golang." + host
 	fmt.Printf("Send request to %q with method GET ...\n", url2)
 	var httpClient1 http.Client

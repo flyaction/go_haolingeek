@@ -13,7 +13,7 @@ import (
 var (
 	profileName      = "blockprofile.out"
 	blockProfileRate = 2
-	debug            = 0
+	debug            = 0 //0需要go tool pprof,1则是可以读懂的普通文本
 )
 
 func main() {

@@ -41,5 +41,6 @@ func stopMemProfile(f *os.File) error {
 	if f == nil {
 		return errors.New("nil file")
 	}
+	//我们通过WriteHeapProfile函数得到的内存概要信息并不是实时的，它是一个快照，是在最近一次的内存垃圾收集工作完成时产生
 	return pprof.WriteHeapProfile(f)
 }

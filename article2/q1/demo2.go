@@ -8,7 +8,7 @@ import (
 var Name string
 
 func init() {
-	flag.StringVar(&Name, "Name", "everyone", "The greeting object.")
+	flag.StringVar(&Name, "Name", "everyone", "The greeting object!")
 }
 
 func main() {

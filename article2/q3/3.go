@@ -13,8 +13,8 @@ var cmdLine = flag.NewFlagSet("question", flag.ExitOnError)
 
 func init() {
 	// 方式3。
-	cmdLine.StringVar(&name, "name", "everyone", "The greeting object.")
-	flag.StringVar(&name, "name", "everyone", "The greeting object.")
+	cmdLine.StringVar(&name, "name", "everyone", "The greeting object..")
+	flag.StringVar(&name, "name", "everyone", "The greeting object..")
 }
 
 func main() {
